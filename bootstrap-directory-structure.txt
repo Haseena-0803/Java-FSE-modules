@@ -1,0 +1,19 @@
+Downloaded Bootstrap Directory Structure:
+
+bootstrap/
+├── css/
+│   ├── bootstrap.min.css       → Minified Bootstrap CSS (for styling and layout)
+│   └── bootstrap.css           → Full unminified version of the CSS (useful for development and debugging)
+│
+├── js/
+│   ├── bootstrap.bundle.min.js → Contains Bootstrap JavaScript plugins + Popper.js (needed for components like tooltips, dropdowns)
+│   └── bootstrap.min.js        → Bootstrap JavaScript without Popper (use if you include Popper separately)
+│
+├── icons/ (optional folder if downloaded)
+│   ├── bootstrap-icons.svg     → SVG sprite for Bootstrap Icons
+│   └── ...                     → Other icon formats or related files
+
+Purpose of Each:
+- css/: Contains all the styles for layout, components, utilities.
+- js/: Contains JavaScript needed for interactive Bootstrap components.
+- icons/: Contains SVG-based icon set compatible with Bootstrap.

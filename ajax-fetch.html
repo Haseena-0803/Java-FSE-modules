@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AJAX & Fetch API - Registration</title>
+  <style>
+    #message {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Event Registration with AJAX</h1>
+
+  <form id="registrationForm">
+    <label>
+      Name:
+      <input type="text" name="name" required />
+    </label>
+    <br /><br />
+    <label>
+      Email:
+      <input type="email" name="email" required />
+    </label>
+    <br /><br />
+    <label>
+      Event:
+      <select name="event" required>
+        <option value="">-- Select --</option>
+        <option value="Jazz Night">Jazz Night</option>
+        <option value="Baking Workshop">Baking Workshop</option>
+        <option value="Yoga Class">Yoga Class</option>
+      </select>
+    </label>
+    <br /><br />
+    <button type="submit">Submit</button>
+  </form>
+
+  <div id="message"></div>
+
+  <script src="23-ajax-fetch.js"></script>
+</body>
+</html>

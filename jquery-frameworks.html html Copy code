@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>jQuery and JS Frameworks</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    #eventCard {
+      width: 300px;
+      padding: 15px;
+      border: 1px solid #333;
+      margin: 20px 0;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Event Card</h1>
+
+  <button id="registerBtn">Toggle Event Card</button>
+
+  <div id="eventCard">
+    <h2>Jazz Night</h2>
+    <p>Date: June 10</p>
+    <p>Seats Available: 10</p>
+  </div>
+
+  <script src="25-jquery-frameworks.js"></script>
+</body>
+</html>

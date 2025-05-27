@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Display and Visibility</title>
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    .box {
+      background-color: #0d6efd;
+      color: white;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 0.375rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="box d-none d-md-block">Visible on md and larger (hidden on xs and sm)</div>
+    <div class="box d-none d-lg-flex justify-content-center">Visible on lg and larger as flex</div>
+    <div class="box d-block d-md-none bg-secondary">Visible only on xs and sm</div>
+  </div>
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

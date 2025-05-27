@@ -1,0 +1,74 @@
+/* ================================
+   Base Styles
+   ================================ */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #fafafa;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  background-color: #007bff;
+  color: white;
+  padding: 15px 0;
+  border-radius: 8px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  gap: 20px;
+  background-color: #0056b3;
+  border-radius: 6px;
+}
+
+nav ul li {
+  padding: 10px 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Content area */
+.content {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.content img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 15px;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* ================================
+   Responsive Styles with Media Query
+   ================================ */
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  nav ul li {
+    padding: 12px 0;
+    text-align: center;
+  }
+
+  body {
+    margin: 10px;
+  }
+}

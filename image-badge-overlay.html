@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Image Badge Overlay</title>
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    .position-relative {
+      display: inline-block;
+    }
+    .badge-overlay {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="position-relative">
+      <img src="https://via.placeholder.com/300x200" alt="Sample Image" class="img-fluid rounded" />
+      <span class="badge bg-danger badge-overlay">New</span>
+    </div>
+  </div>
+
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

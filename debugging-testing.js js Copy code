@@ -1,0 +1,46 @@
+const form = document.getElementById('registrationForm');
+const messageDiv = document.getElementById('message');
+
+const mockApiUrl = 'https://jsonplaceholder.typicode.com/posts';
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  console.log('Form submission started');
+  messageDiv.textContent = '';
+
+  const name = form.elements['name'].value.trim();
+  const email = form.elements['email'].value.trim();
+  const event = form.elements['event'].value;
+
+  console.log('Form data:', { name, email, event });
+
+  // Simple validation check
+  if (!name || !email || !event) {
+    messageDiv.textContent = 'Please fill in all fields.';
+    console.warn('Validation failed: missing input');
+    return;
+  }
+
+  const payload = { name, email, event };
+  console.log('Sending payload:', payload);
+
+  fetch(mockApiUrl, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload),
+  })
+    .then(response => {
+      console.log('Fetch response received:', response);
+      if (!response.ok) throw new Error('Network response was not OK');
+      return response.json();
+    })
+    .then(data => {
+      console.log('Response JSON:', data);
+      messageDiv.textContent = `Registration successful! ID: ${data.id}`;
+    })
+    .catch(error => {
+      console.error('Fetch error:', error);
+      messageDiv.textContent = 'Error during registration: ' + error.message;
+    });
+});

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Find Nearby Events</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background: #f0f8ff;
+      max-width: 600px;
+      margin: auto;
+      text-align: center;
+    }
+    button {
+      padding: 12px 25px;
+      font-size: 18px;
+      cursor: pointer;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      border-radius: 6px;
+    }
+    #output {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #333;
+      min-height: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Locate Nearest Event</h2>
+  <button id="findBtn">Find Nearby Events</button>
+  <div id="output"></div>
+
+  <script>
+    const output = document.getElementById('output');
+    const btn = document.getElementById('findBtn');
+
+    btn.addEventListener('click', () => {
+      if (!navigator.geolocation) {
+        output.textContent = 'Geolocation is not supported by your browser.';
+        return;
+      }
+
+      output.textContent = 'Locating…';
+
+      navigator.geolocation.getCurrentPosition(success, error, {
+        enableHighAccuracy: true,
+        timeout: 10000,
+        maximumAge: 0
+      });
+    });
+
+    function success(position) {
+      const lat = position.coords.latitude.toFixed(6);
+      const lon = position.coords.longitude.toFixed(6);
+      output.textContent = `Your coordinates: Latitude ${lat}, Longitude ${lon}`;
+      // Here you could add code to find/display nearest events based on these coords
+    }
+
+    function error(err) {
+      switch(err.code) {
+        case err.PERMISSION_DENIED:
+          output.textContent = "Permission denied. Please allow location access.";
+          break;
+        case err.POSITION_UNAVAILABLE:
+          output.textContent = "Position unavailable.";
+          break;
+        case err.TIMEOUT:
+          output.textContent = "Request timed out. Please try again.";
+          break;
+        default:
+          output.textContent = "An unknown error occurred.";
+      }
+    }
+  </script>
+
+</body>
+</html>

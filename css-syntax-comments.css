@@ -1,0 +1,59 @@
+/* ================================
+   Layout Styles
+   ================================ */
+
+/* Style for page container */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ================================
+   Header Styles
+   ================================ */
+
+/* Style for site header */
+header {
+    background-color: #f8f9fa;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Style for header title */
+header h1 {
+    font-size: 32px;
+    color: #333;
+}
+
+/* ================================
+   Button Styles
+   ================================ */
+
+/* Style for main CTA button */
+.cta-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Hover effect for CTA button */
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* ================================
+   Footer Styles
+   ================================ */
+
+/* Style for page footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+}

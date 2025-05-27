@@ -1,0 +1,6 @@
+// Customize Bootstrap variables before importing Bootstrap source
+$primary: #ff5722;       // Custom primary color
+$border-radius: 1rem;    // Custom border radius for rounded corners
+
+// Import Bootstrap's Sass source files
+@import "node_modules/bootstrap/scss/bootstrap";

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Box Model & Layout Control</title>
+  <style>
+    /* ================================
+       Event Card Styling
+       ================================ */
+    .eventCard {
+      border: 2px solid #3498db;
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 8px;
+      background-color: #f0f8ff;
+    }
+
+    /* ================================
+       Form Fields Highlight (outline)
+       ================================ */
+    input:focus, select:focus, textarea:focus {
+      outline: 3px solid #ff9800;
+      outline-offset: 2px;
+    }
+
+    /* ================================
+       Visibility Demo
+       ================================ */
+    .hidden-visibility {
+      visibility: hidden;
+      background-color: #eee;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+    }
+
+    .hidden-display {
+      display: none;
+      background-color: #eee;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Box Model & Layout Control</h1>
+
+  <section class="eventCard">
+    <h2>Community Cleanup</h2>
+    <p>Date: June 5, 2025</p>
+    <p>Join us in cleaning up the neighborhood park.</p>
+  </section>
+
+  <section class="eventCard">
+    <h2>Music Festival</h2>
+    <p>Date: July 12, 2025</p>
+    <p>Enjoy live performances from local bands.</p>
+  </section>
+
+  <h2>Form Field Focus Example</h2>
+  <form>
+    <label for="name">Name:</label><br />
+    <input type="text" id="name" name="name" placeholder="Enter your name" /><br /><br />
+
+    <label for="email">Email:</label><br />
+    <input type="email" id="email" name="email" placeholder="Enter your email" /><br /><br />
+
+    <label for="event">Select Event:</label><br />
+    <select id="event" name="event">
+      <option value="cleanup">Community Cleanup</option>
+      <option value="festival">Music Festival</option>
+    </select><br /><br />
+
+    <input type="submit" value="Register" />
+  </form>
+
+  <h2>Visibility Comparison</h2>
+
+  <div class="hidden-visibility">This box uses <code>visibility: hidden;</code> — it is invisible but still occupies space.</div>
+
+  <div class="hidden-display">This box uses <code>display: none;</code> — it is removed from the layout entirely.</div>
+
+  <p>Note how the space taken by the first box remains, but the second box disappears completely.</p>
+
+</body>
+</html>

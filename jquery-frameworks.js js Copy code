@@ -1,0 +1,6 @@
+// Using jQuery to handle button click and fade event card in/out
+$(document).ready(function () {
+  $('#registerBtn').click(function () {
+    $('#eventCard').fadeToggle(600);
+  });
+});

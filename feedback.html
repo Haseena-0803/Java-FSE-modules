@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Feedback</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background-color: #f9f9f9;
+    }
+    form {
+      background: white;
+      padding: 20px;
+      max-width: 500px;
+      margin: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #28a745;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    img {
+      display: block;
+      margin: 20px auto;
+      border: 2px solid #ccc;
+      width: 200px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    #feeDisplay, #charCount, #confirmation {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <form id="feedbackForm">
+    <h2>Event Feedback Form</h2>
+
+    <label for="phone">Phone Number:</label>
+    <input type="text" id="phone" placeholder="Enter 10-digit phone number" onblur="validatePhone()">
+
+    <label for="event">Select Event:</label>
+    <select id="event" onchange="showFee()">
+      <option value="">-- Choose Event --</option>
+      <option value="Workshop">Workshop - $10</option>
+      <option value="Concert">Concert - $20</option>
+      <option value="Seminar">Seminar - $15</option>
+    </select>
+    <div id="feeDisplay"></div>
+
+    <label for="feedback">Your Feedback:</label>
+    <textarea id="feedback" rows="4" onkeyup="countCharacters()"></textarea>
+    <div id="charCount">Characters: 0</div>
+
+    <button type="button" onclick="showConfirmation()">Submit</button>
+    <div id="confirmation"></div>
+  </form>
+
+  <img src="event.jpg" alt="Event Image" title="Double-click to enlarge" ondblclick="enlargeImage(this)">
+
+  <script>
+    function validatePhone() {
+      const phone = document.getElementById('phone').value;
+      const phonePattern = /^\d{10}$/;
+      if (!phonePattern.test(phone)) {
+        alert('Please enter a valid 10-digit phone number.');
+      }
+    }
+
+    function showFee() {
+      const event = document.getElementById('event');
+      const feeDisplay = document.getElementById('feeDisplay');
+      const selected = event.options[event.selectedIndex].text;
+      feeDisplay.textContent = `Selected: ${selected}`;
+    }
+
+    function showConfirmation() {
+      const confirmation = document.getElementById('confirmation');
+      confirmation.textContent = 'Thank you! Your feedback has been submitted.';
+    }
+
+    function enlargeImage(img) {
+      if (img.style.transform === "scale(2)") {
+        img.style.transform = "scale(1)";
+      } else {
+        img.style.transform = "scale(2)";
+      }
+    }
+
+    function countCharacters() {
+      const feedback = document.getElementById('feedback').value;
+      const charCount = document.getElementById('charCount');
+      charCount.textContent = `Characters: ${feedback.length}`;
+    }
+  </script>
+
+</body>
+</html>

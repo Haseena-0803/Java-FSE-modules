@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Async JS & Promises</title>
+  <style>
+    #spinner {
+      display: none;
+      font-weight: bold;
+      font-size: 18px;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Async Event Fetcher</h1>
+  <button id="fetchBtn">Fetch Events (.then/.catch)</button>
+  <button id="fetchAsyncBtn">Fetch Events (async/await)</button>
+  <div id="spinner">Loading...</div>
+  <ul id="eventList"></ul>
+
+  <script src="20-async-js.js"></script>
+</body>
+</html>

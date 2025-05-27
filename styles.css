@@ -1,0 +1,17 @@
+/* Header styles */
+h2 {
+    color: darkgreen;
+    font-size: 24px;
+}
+
+h3 {
+    color: darkblue;
+    font-style: italic;
+}
+
+/* Paragraph styles */
+p {
+    color: #333;
+    line-height: 1.5;
+    font-size: 16px;
+}

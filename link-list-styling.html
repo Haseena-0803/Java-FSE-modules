@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Link and List Styling</title>
+
+    <style>
+        /* ================================
+           Link Styling
+           ================================ */
+
+        /* Default link */
+        a:link {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        /* Visited link */
+        a:visited {
+            color: #551A8B;
+        }
+
+        /* Hovered link */
+        a:hover {
+            color: #ff6600;
+            text-decoration: underline;
+        }
+
+        /* Active (clicked) link */
+        a:active {
+            color: red;
+        }
+
+        /* ================================
+           Unordered List Styling
+           ================================ */
+
+        ul.styled-list {
+            list-style-type: square;
+            list-style-position: inside;
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        ul.styled-list li {
+            margin-bottom: 10px;
+        }
+
+        /* ================================
+           Navigation Menu (No Bullets)
+           ================================ */
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            padding: 8px 12px;
+            background-color: #e0e0e0;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Styled Links and Lists</h1>
+
+    <p>Visit our <a href="https://example.com">homepage</a> or check our <a href="https://example.com/news">latest news</a>.</p>
+
+    <h2>Navigation Menu</h2>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <h2>Key Features</h2>
+    <ul class="styled-list">
+        <li>Accessible design</li>
+        <li>Mobile-friendly layout</li>
+        <li>Real-time updates</li>
+    </ul>
+
+</body>
+</html>
